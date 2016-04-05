@@ -1,0 +1,139 @@
+body,html {
+	text-align: center;
+	height: 100%;
+	padding-top: 30px;
+  	padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+#startButton {
+	outline:none !important;
+	margin-bottom: 10%;
+}
+
+#howButton {
+	outline:none !important;
+	margin-bottom: 10%;
+}
+
+#aboutButton {
+	outline:none !important;
+	margin-bottom: 10%;
+}
+
+#alertTaskCompleted, #alertTaskFailed, #alertTaskFold {
+	z-index: 10000;
+	text-align: center;
+	position: fixed;
+	padding: 2em;
+    left: 50%;
+    top: 30%;
+    width: 80%;
+	font-size:20px;
+    transform: translate(-50%, -30%);
+}
+
+
+#mainLogo {
+	margin-bottom:10%;
+	img-size:100%;
+}
+
+#instructionText {
+	font-size:12px;
+}
+
+#aboutText {
+	font-size:12px;
+}
+
+.back {
+	outline:none !important;
+	margin-bottom:2%;
+}
+
+.forward {
+	outline:none !important;
+	margin-bottom:2%;
+
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.row{
+	overflow: hidden;
+}
+
+
+#deckleft {
+
+	margin-top: 5%;
+	background-color: white;
+	border: solid 1em;
+	border-color: #6EB6E4;
+}
+
+
+#deckright {
+
+	margin-top: 5%;
+	background-color: white;
+	border: solid 1em;
+	border-color: #DF2040;
+}
+
+#taskDeckTruth {
+	margin-top: 5%;
+	margin-right: 5%;
+	margin-left:5%;
+	background-color: white;
+	border: solid 1em;
+	border-color: #6EB6E4;
+
+}
+
+#taskDeckDare {
+	margin-top: 5%;
+	margin-right: 5%;
+	margin-left:5%;
+	background-color: white;
+	border: solid 1em;
+	border-color: #DF2040;
+
+}
+
+.menuButton {
+	width: 13em;
+}
+
+.choiceButton {
+	text-align: center;
+}
+
+.btn-info {
+	height: 3em;
+}
+
+.img-responsive {
+	display:inline;
+}
+
+.infoPicture {
+	width: 50%;
+}
+

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Juuso Heikkinen & Arto Hänninen">
+
+    <title>Truth or Dare</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        </div>
+
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav" style="float:right;" >
+
+          <li><a href="#"id="menu">Menu</a></li>
+                <li><a href="#" id="how">How to play</a></li>
+                <li><a href="#" id="about">About the game</a></li>
+                 <li role="separator" class="divider"></li>
+                 <li><a href="#" id="start2">Start</a></li>
+
+                 <li><a href="#"id="soundOn" <span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></a></li>
+
+            <li><a href="#"id="soundOff" <span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span></a></li>
+
+            </ul>
+              
+        </div>
+      </div>
+    </nav>
+
+
+      <!--- END OF NAVIGATION -->
+      <!--- START OF CONTENT -->
+
+      <!--- ALERTS -->
+
+      <div class="alert alert-success" id="alertTaskCompleted">
+    <strong>Great job, the task is completed!</strong> Next player's turn.
+  </div>
+
+  <div class="alert alert-warning" id="alertTaskFailed">
+    <strong>Oh no, but at least you tried!</strong> Drink one for trying.
+  </div>
+
+  <div class="alert alert-danger" id="alertTaskFold">
+    <strong>Fold!</strong> Drink two for passing.
+  </div>
+
+
+
+
+    <!--- MENU PAGE -->
+
+      <div class="row no-margin" id="menuPage" style="background-color:lavender; height:100%;">
+       <div class="col-xs-offset-1 col-xs-10 col-md-2 col-md-offset-5 text-center">
+
+           <img class="img-responsive logo" src="pictures/logo_tod.png" id="mainLogo">
+
+      </div>
+
+        <div class="col-xs-offset-1 col-xs-10 col-md-2 col-md-offset-5">
+
+      
+      <div class="btn-group-vertical menuButton" id="menuButtons">
+
+        <button type="button" class="btn btn-info btn-lg" id="startButton">Start</button>
+        <button type="button" class="btn btn-info btn-lg" id="howButton">How to play</button>
+        <button type="button" class="btn btn-info btn-lg" id="aboutButton">About the game</button>
+
+      </div>
+
+        </div>
+
+
+      </div>
+
+      
+
+      <!--- INSTRUCTIONS PAGE -->
+
+      <div class="row no-margin" id="instructionsPage" style="background-color:lavender; height:100%">
+        <div class="col-xs-offset-1 col-xs-10 col-md-2 col-md-offset-5">
+
+        <img class="img-responsive logo" src="pictures/logo_how.png" id="logo">
+	
+      </div>
+
+        <div class="col-xs-offset-1 col-xs-10 col-md-2 col-md-offset-5">
+
+	<img class="img-responsive no-margin infoPicture" src="pictures/i1.png" id="i1">
+	<img class="img-responsive no-margin infoPicture" src="pictures/i2.png" id="i2">
+	<img class="img-responsive no-margin infoPicture" src="pictures/i3.png" id="i3">
+	<img class="img-responsive no-margin infoPicture" src="pictures/i4.png" id="i4">
+	<img class="img-responsive no-margin infoPicture" src="pictures/i5.png" id="i5">
+	
+	</div>
+
+	<div class="col-xs-offset-1 col-xs-10 col-md-2 col-md-offset-5">
+
+
+	<p id="instructionText">First, to play Truth or Dare, you need to have at least two players. You can have as many players as you want...<p>
+
+	<button type="button" class="btn btn-info back" aria-label="Left Align" id="backToI1">
+  		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	</button>
+	<button type="button" class="btn btn-info back" aria-label="Left Align" id="backToI2">
+  		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	</button>
+	<button type="button" class="btn btn-info back" aria-label="Left Align" id="backToI3">
+  		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	</button>
+	<button type="button" class="btn btn-info back" aria-label="Left Align" id="backToI4">
+  		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	</button>
+
+
+	<button type="button" class="btn btn-info forward btn-md" aria-label="Left Align" id="toI2">
+  		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	</button>
+	<button type="button" class="btn btn-info forward" aria-label="Left Align" id="toI3">
+  		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	</button>
+	<button type="button" class="btn btn-info forward" aria-label="Left Align" id="toI4">
+  		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	</button>
+	<button type="button" class="btn btn-info forward" aria-label="Left Align" id="toI5">
+  		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	</button>
+
+	</div>
+
+
+        <div class="col-xs-offset-1 col-xs-10 col-md-2 col-md-offset-5">
+
+
+    <button type="button" class="btn btn-info btn-md" id="backButton">Back</button>
+	
+	
+      </div>
+
+      
+       </div>
+
+
+       <!--- ABOUT THE GAME -->
+
+      <div class="row no-margin" id="aboutTheGame" style="background-color:lavender; height:100%">
+        <div class="col-xs-offset-1 col-xs-10 col-md-2 col-md-offset-5">
+
+        <img class="img-responsive logo no-margin" src="pictures/logo_about.png" id="logo">
+
+      </div>
+
+      <div class="col-xs-offset-1 col-xs-10 col-md-2 col-md-offset-5">
+
+
+     <p id="aboutText">'Truth or Dare' is made by Arto-Pekka Hänninen and Juuso Heikkinen, both students of Haaga-Helia's School of applied sciences.</p>
+
+     <p id="aboutText">Making this game was a part of a course called "Mobiilituotekehitys".</p>
+
+     <p id="aboutText">We wish you and your friends funny gaming moments with our version of 'Truth or Dare'!</p>
+
+     <p id="aboutText"><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> Innonaattori, 2015</p>
+
+     
+              </div>
+
+        <div class="col-xs-offset-1 col-xs-10 col-md-2 col-md-offset-5">
+
+
+          <button type="button" class="btn btn-info btn-md" id="backButton">Back</button>
+
+              </div>
+            </div>
+
+
+
+       <!--- DECKS PAGE -->
+
+   
+  <div class="row no-margin" id="deck_wrapper" style="background-color:lavender; height:100%">
+        <div class="col-xs-offset-1 col-xs-10 col-md-2 col-md-offset-5">
+
+	 <div class="jumbotron text-center" id="deckleft">
+    <div id="truthdeck" class="deckbutton">
+	<img class="img-responsive kuva" src="pictures/logo_truth.png" id="tcard">
+      </div>
+    </div>
+
+  <div class="jumbotron text-center" id="deckright">
+    <div id="daredeck" class="deckbutton">
+<img class="img-responsive kuva" src="pictures/logo_dare.png" id="tcard">
+    </div>
+  </div>
+
+
+        </div>
+
+
+	<!--- TASKCARD -->	
+	
+<div class="jumbotron text-center" id="taskDeckTruth">
+    <div id="taskCard">
+    <img class="img-responsive kuva" src="pictures/logo_truth.png" id="taskTruth" style="margin-bottom:2%;">
+        <p id="textTruth">Truth or Dare</p>
+    </div>
+  </div>
+
+<div class="jumbotron text-center" id="taskDeckDare">
+    <div id="taskCard">
+      <img class="img-responsive kuva" src="pictures/logo_dare.png" id="taskDare" style="margin-bottom:2%;">
+        <p id="textDare">Truth or Dare</p>
+    </div>
+  </div>
+
+	<div class="btn btn-group choiceButton" id="choiceButtonsTruth">
+        <button type="button" class="btn btn-info btn-md resetButton">Told</button>
+        <button type="button" class="btn btn-info btn-md failedButton">Don't Buy it</button>
+        <button type="button" class="btn btn-info btn-md foldButton">Won't Tell</button>
+</div>
+
+<div class="btn btn-group choiceButton" id="choiceButtonsDare">
+        <button type="button" class="btn btn-info btn-md resetButton">Done</button>
+        <button type="button" class="btn btn-info btn-md failedButton">Didn't Work</button>
+        <button type="button" class="btn btn-info btn-md foldButton">Won't Do</button>
+</div>
+
+</div>
+
+</div>
+  </div>
+
+    </body>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- JS FILES -->
+
+    <script type="text/javascript" src="omat/kirjasto.min.js"></script>
+    <script type="text/javascript" src="omat/script3.js"></script>
+    <link rel="stylesheet" type="text/css" href="omat/style3.css">
+    <script type="text/javascript" src="dares.js"></script>
+  <script type="text/javascript" src="truths.js"></script>
+
+  </body>
+</html>
